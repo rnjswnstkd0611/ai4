@@ -46,7 +46,7 @@ if "last_prediction" not in st.session_state:
 # ======================
 # 모델 로드
 # ======================
-FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "")
+FILE_ID = st.secrets.get("GDRIVE_FILE_ID", "1C95aV6CHM-N-34gfiZfxG7SPaI4P0jad")
 MODEL_PATH = st.secrets.get("MODEL_PATH", "model.pkl")
 
 @st.cache_resource
@@ -71,18 +71,23 @@ st.markdown("---")
 CONTENT_BY_LABEL: dict[str, dict[str, list[str]]] = {
 
      labels[0]: {
-       "texts": [""],
-       "images": [""],
+       "texts": ["중국식 냉면은 맛있어"],
+       "images": ["https://mblogthumb-phinf.pstatic.net/MjAyNDA3MTNfMTM5/MDAxNzIwODcyMTg5Mzk2.R85dx_qTfv13nrQPR3FvgfLNWNfdSDWmmlH2PWvFhmUg.Aoqc3iu52EbZIjtfDUyw2OKOzkNcMEi2D3bdvu2KkPkg.JPEG/SE-231ebe51-1c30-11ef-8608-b335d7d8b709.jpg?type=w800"],
        "videos": [""]
      },
      labels[1]: {
-       "texts": [""],
-       "images": [""],
+       "texts": ["짜장면은 맛있어"],
+       "images": ["https://cdn.hapt.co.kr/news/photo/202402/161496_32195_5625.jpg"],
        "videos": [""]
      },
      labels[2]: {
-       "texts": [""],
-       "images": [""],
+       "texts": ["짬뽕은 맛있어"],
+       "images": ["https://i.namu.wiki/i/upNZ7cYsFsAfU0KcguO6OHMK68xC-Bj8EXxdCti61Jhjx10UCBgdK5bZCEx41-aAWcjWZ5JMKFUSaUGLC1tqWg.webp"],
+       "videos": [""]
+     },
+ labels[2]: {
+       "texts": ["탕수육은 맛있어"],
+       "images": ["https://i.namu.wiki/i/DQPzlCdDvbadZasufp6VhKSLDPHU4YlA1f9GbY2fP9nMvjNOSE32JZxL_ysj2duhcUtcWo-cGQvO_qS3rXctJw.webp"],
        "videos": [""]
      },
 }
